@@ -1,1 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  list-style: none;
+  width: 100%;
+}
+
+li {
+  margin: 0.5rem 0;
+  font-size: 2rem;
+  padding: 0 0.5rem;
+  flex: 0 0 1000px;
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: greenyellow;
+  margin: 0.5rem 0;
+}

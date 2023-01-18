@@ -4,22 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Train</title>
+    <link rel="stylesheet" href="{{ mix('css/app.css')}}">
 </head>
 <body>
-    <ul>
+    <ul class="container">
         @foreach ($trains as $train)
-            <li>
-                <p><span>Nome azieda:</span><strong> {{ $train->Azienda }}</strong></p>
-                <p><span>Stazione_di_partenza:</span><strong> {{ $train->Stazione_di_partenza }}</strong></p>
-                <p><span>Stazione_di_arrivo:</span><strong> {{ $train->Stazione_di_arrivo }}</strong></p>
-                <p><span>Orario_di_partenza:</span><strong> {{ $train->Orario_di_partenza }}</strong></p>
-                <p><span>Orario_di_arrivo:</span><strong> {{ $train->Orario_di_arrivo }}</strong></p>
-                <p><span>Codice_treno:</span><strong> {{ $train->Codice_treno }}</strong></p>
-                <p><span>Numero_di_carrozze:</span><strong> {{ $train->Numero_di_carrozze }}</strong></p>
-                <p><span>In_orario:</span><strong> {{ $train->In_orario }}</strong></p>
-                <p><span>Cancellato:</span><strong> {{ $train->Cancellato }}</strong></p>
-            </li>
+            <div class="card">
+                <li>Nome azieda: {{ $train->company }}</li>
+                <li>Stazione di partenza: {{ $train->departure_station }}</li>
+                <li>Stazione di arrivo: {{ $train->station_of_arrival }}</li>
+                <li>Orario di partenza: {{ $train->departure_time }}</li>
+                <li>Orario di arrivo: {{ $train->arrival_time }}</li>
+                <li>Codice treno: {{ $train->train_code }}</li>
+                <li>Numero di carrozze: {{ $train->number_of_coaches }}</li>
+                <li>In orario: {{ $train->in_time }}</li>
+                <li>Cancellato: {{ $train->deleted }}</li>
+            </div>
         @endforeach
     </ul>
 </body>
